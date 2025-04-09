@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <script src="/lib/webgl-utils.js"></script>
+    <script src="/lib/webgl-debug.js"></script>
+    <script src="/lib/cuon-utils.js"></script>
+    <script src="TriangleDraw.js"></script>
+    <script src="Point.js"></script>
+  
+    <script src="Circle.js"></script>
+
+    <p>
+      <button id="clear" onclick="clearCanvas();">Clear Canvas</button>
+      <button id="delete" onclick="deleteLastTriangle();">Delete Last Triangle</button>
+    </p>
+
+    <h3>
+      Color:
+    </h3>
+    <p>Red
+      <input type="range" id="r" min="0" max="100" value="100"/>
+    Green
+      <input type="range" id="g" min="0" max="100" value="0" />
+    Blue
+      <input type="range" id="b" min="0" max="100" value="0" />
+    </p>
+    <div id="colorDisplay" style="width: 30px; height: 30px;"></div>
+
+    <h3>
+      Generated Code:
+    </h3>
+    <p id="generatedCode">
+      Code will appear here as you draw!
+    </p>
+  </body>
+</html>

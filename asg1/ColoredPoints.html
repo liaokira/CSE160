@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 1: Painting</title>
+  </head>
+
+  <body onload="main()">
+    <h1>
+      Assignment 1: Painting
+    </h1>
+    <h2>
+      Kira Liao (kiyliao@ucsc.edu)
+    </h2>
+
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <script src="/lib/webgl-utils.js"></script>
+    <script src="/lib/webgl-debug.js"></script>
+    <script src="/lib/cuon-utils.js"></script>
+    <script src="ColoredPoints.js"></script>
+    <script src="Point.js"></script>
+    <script src="SlightlyDifferentTriangle.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+
+    <p>
+      <button id="clear" onclick="clearCanvas();">Clear Canvas</button>
+    </p>
+
+    <h3>
+      Drawing Mode:
+    </h3>
+    <p>
+      <button id="square">Squares</button>
+      <button id="triangle">Triangles</button> 
+      <button id="circle">Circles</button>
+    </p>
+
+    <h3>
+      Shape Color:
+    </h3>
+    <p>Red
+      <input type="range" id="r" min="0" max="100" value="100"/>
+    Green
+      <input type="range" id="g" min="0" max="100" value="0" />
+    Blue
+      <input type="range" id="b" min="0" max="100" value="0" />
+    </p>
+    <h3>
+      Shape Size:
+    </h3>
+    <p>
+      Size
+      <input type="range" id="size" min="5" max="40" value="10"/>
+      Segments (circles)
+      <input type="range" id="segments" min="5" max="40" value="10"/>
+    </p>
+
+    <h1>Part 2</h1>
+    <h3>
+      Render my drawing!
+    </h3>
+    <button id="render" onclick="renderDrawing();">Render</button>
+    
+    <h1>Part 3</h1>
+  </body>
+</html>
